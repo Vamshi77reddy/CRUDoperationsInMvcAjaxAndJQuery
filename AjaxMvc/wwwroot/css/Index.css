@@ -1,0 +1,8 @@
+﻿body {
+    background-image: radial-gradient(black, transparent);
+}
+
+.pb-3, .py-3 {
+    padding-bottom: 1rem !important;
+    background: beige;
+}

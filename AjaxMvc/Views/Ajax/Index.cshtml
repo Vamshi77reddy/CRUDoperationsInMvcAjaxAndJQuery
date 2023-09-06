@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+<link href="~/css/index.css" rel="stylesheet" />
+
+<button class="btn btn-sm btn-primary m-2" id="btnAddButton" >Add Employee</button>
+<table class=" table table-bordered">
+
+    <thead>
+        <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Gender</th>
+    <th>Dep</th>
+    <th>Salary</th>
+    </tr>
+    </thead>
+    <tbody id="table-Data"></tbody>
+</table>
+<div>
+    <input type="hidden" id="urlEmployeeData" value="@Url.Action("EmployeeList","Ajax")" />
+</div>
+<div class=" madal Employee modal" id="EmployeeMadal">
+    <div class="Model modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="text-info modal-text">Add Employee</h1>
+                <button class="close text-danger" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form method="post">
+                    <div class="form-group">
+                        <label>Id</label>
+                        <input type="text"  class="form-control" id="EmployeeId" disabled="disabled" />
+                    </div>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" placeholder="Enter name" class="form-control" id="Name"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <input type="text" placeholder="Enter gender" class="form-control" id="Gender" />
+                    </div>  <div class="form-group">
+                        <label>Dep</label>
+                        <input type="text" placeholder="Enter department" class="form-control" id="Dep" />
+                    </div>  <div class="form-group">
+                        <label>Salary</label>
+                        <input type="text" placeholder="Enter Salary" class="form-control" id="Salary" />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="AddEmployee()" id="AddEmployee">Save</button>
+                <button class="btn btn-warning" onclick="UpdateEmp()" style="display:none" id="btnUpdate">Update</button>
+                <button class="btn btn-danger btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/js/custom.js"></script>
