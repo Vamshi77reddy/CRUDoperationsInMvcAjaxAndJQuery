@@ -1,5 +1,6 @@
 ﻿using AjaxMvc.Data;
 using AjaxMvc.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 
@@ -21,7 +22,7 @@ namespace AjaxMvc.Controllers.Ajax
             var data = context.Employees.ToList();
             return new JsonResult(data);
         }
-
+        [Authorize]
         [HttpPost]
         public JsonResult AddEmployee(Employee employee)
         {
@@ -37,7 +38,7 @@ namespace AjaxMvc.Controllers.Ajax
             context.SaveChanges();
             return new JsonResult("data is saved");
         }
-
+        
         public JsonResult Delete(int id)
         {
             var emp = context.Employees.Where(x => x.Id == id).SingleOrDefault();
