@@ -133,3 +133,4 @@ C:\Users\Teju Reddy\source\repos\AjaxMvc\AjaxMvc\obj\Debug\netcoreapp3.1\AjaxMvc
 C:\Users\Teju Reddy\source\repos\AjaxMvc\AjaxMvc\obj\Debug\netcoreapp3.1\AjaxMvc.dll
 C:\Users\Teju Reddy\source\repos\AjaxMvc\AjaxMvc\obj\Debug\netcoreapp3.1\AjaxMvc.pdb
 C:\Users\Teju Reddy\source\repos\AjaxMvc\AjaxMvc\obj\Debug\netcoreapp3.1\AjaxMvc.genruntimeconfig.cache
+C:\Users\Teju Reddy\source\repos\AjaxMvc\AjaxMvc\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_NavBar.cshtml.g.cs
